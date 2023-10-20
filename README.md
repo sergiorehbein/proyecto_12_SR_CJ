@@ -1,8 +1,10 @@
 # proyecto_12_SR_CJ
-Proyecto_12_SergioRehbein_CamilaJauregui
+Proyecto 12 Sergio Rehbein y Camila Jauregui
 
 
 # Quick Start
+Proyecto 12 Sergio Rehbein y Camila Jauregui 
+Exploración y Comparación de Técnicas de Regresión Simbólica
 
 Se mostrará como se deben descargar y ejecutar los librerías que nos proporcionan en los papers para posteriormente poder aplicar los benchmark de comparación
 
