@@ -3,7 +3,10 @@ Proyecto_12_SergioRehbein_CamilaJauregui
 
 
 # Quick Start
-## Installation
+## Installation EQL
+
+    pip install EQL-NN
+    
 It's strongly recommended to setup a fresh virtual environment by typing
 
     virtualenv -p python3 feyn
