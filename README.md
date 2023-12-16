@@ -90,5 +90,29 @@ Para cada modelo se dará el ejemplo con Nguyen 1, se debe iterar de la misma fo
         y = data[:, 1]  # Esto asume que y es la segunda columna
         
         EQLmodel.fit(x, y, 0.1,t0 = 6000, t1 = 2000, t2 = 2000, atol = 0.001)
-        EQLmodel.summary()
+        EQLmodel.summary() # Ver resultados del modelo
 
+Con el código anterior se ejecuta la primera función del benchmark Nguyen y de la siguiente forma se genera las métricas utilizadas:
+
+        y_pred = EQLmodel.predict(x)
+
+        def calculate_metrics(y_pred, y_truth):
+            """
+            Calculate NRMSE and R2-Score based on predicted and true values.
+        
+            :param y_pred: Predicted values
+            :param y_truth: True values
+            :return: NRMSE and R2-Score
+            """
+            # NRMSE calculation
+            rmse = np.sqrt(np.mean((y_pred - y_truth)**2))
+            nrmse = rmse / (np.max(y_truth) - np.min(y_truth))
+        
+            # R2-Score calculation
+            r2 = r2_score(y_truth, y_pred)
+        
+            return nrmse, r2
+        
+            # Test the function with some example data
+            nrmse, r2 = calculate_metrics(y_pred, y)
+            nrmse, r2
