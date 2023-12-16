@@ -74,21 +74,21 @@ Para cada modelo se dará el ejemplo con Nguyen 1, se debe iterar de la misma fo
 ## Ejecución EQL
 
     import tensorflow as tf
-import numpy as np
-import matplotlib.pyplot as plt
-
-from EQL.model import EQL
-EQLmodel = EQL(num_layers = 1)
-EQLmodel.build_and_compile_model()
-
-
-# Suponiendo que 'data.txt' es tu archivo y que está delimitado por espacios
-data = np.loadtxt('Nguyen1.txt')
-
-# Separar los datos en x e y
-x = data[:, 0]  # Esto asume que x es la primera columna
-y = data[:, 1]  # Esto asume que y es la segunda columna
-
-EQLmodel.fit(x, y, 0.1,t0 = 6000, t1 = 2000, t2 = 2000, atol = 0.001)
-EQLmodel.summary()
+    import numpy as np
+    import matplotlib.pyplot as plt
+    
+    from EQL.model import EQL
+    EQLmodel = EQL(num_layers = 1)
+    EQLmodel.build_and_compile_model()
+    
+    
+    # Suponiendo que 'data.txt' es tu archivo y que está delimitado por espacios
+    data = np.loadtxt('Nguyen1.txt')
+    
+    # Separar los datos en x e y
+    x = data[:, 0]  # Esto asume que x es la primera columna
+    y = data[:, 1]  # Esto asume que y es la segunda columna
+    
+    EQLmodel.fit(x, y, 0.1,t0 = 6000, t1 = 2000, t2 = 2000, atol = 0.001)
+    EQLmodel.summary()
 
