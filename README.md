@@ -8,6 +8,10 @@ Exploración y Comparación de Técnicas de Regresión Simbólica
 
 Se mostrará como se deben descargar y ejecutar los librerías que nos proporcionan en los papers para posteriormente poder aplicar los benchmark de comparación
 
+## Pre- Instalación
+
+    Para cada código se recomienda tener un entorno virtual diferente, dado que pueden utilizar diferentes versiones de algunas librerías.
+
 ## Installation EQL
 
     pip install EQL-NN
