@@ -116,3 +116,14 @@ Con el código anterior se ejecuta la primera función del benchmark Nguyen y de
             # Test the function with some example data
             nrmse, r2 = calculate_metrics(y_pred, y)
             nrmse, r2
+
+## Ejecución EQL (%)
+
+Crear datos y entrenar
+
+         python3 data_utils.py "{'file_name': 'Nguyen1', 'fn_to_learn': 'F1', 'train_val_examples': 10000, 'test_examples': 5000}"
+         python3 train.py '{"train_val_file": "data/Nguyen1_train_val", "test_file": "data/Nguyen1_test"}'
+
+Mostrar los resultados:
+
+        python3 model_selection.py "{'results_path': 'results/model_selection'}"
