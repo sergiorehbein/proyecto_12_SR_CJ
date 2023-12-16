@@ -127,3 +127,38 @@ Crear datos y entrenar
 Mostrar los resultados:
 
         python3 model_selection.py "{'results_path': 'results/model_selection'}"
+
+
+## Ejecución EQL (Enconders)
+
+En el siguiente .py se debe ejecutar y dejará todos los resultados de las funciones dado que se corre con un ciclo for:
+
+        python3 benchmark_l12-v2.py
+
+Se debe usar la misma función mostrada anteriormente para los cáculos de las métricas en base a las funciones encontradas, en este caso para hallar los y_pred, se debe generar en base a las funciones resultantes, o sea, un ejemplo:
+
+        data = np.loadtxt('Nguyen1.txt')
+        
+        # Separar los datos en x e y
+        x0 = data[:, 0]  # Esto asume que x es la primera columna
+        y_truth= data[:, 1]  # Esto asume que y es la segunda columna
+
+        funcion_retorno_eql_enconder_nguyen1= ##colocar funcioón encontrada en función de x0
+
+        y_pred=uncion_retorno_eql_enconder_nguyen1
+
+        ... ## Ejecutar resto de código de métricas.
+
+## Ejecución AI-Feynman 
+
+Con el siguiente código se obtiene la función encontrada y se debe hacer lo mismo de antes, crear una instancia de la función en base a los datos de 'x' del Nguyen y posteriormente correr las métrcias.
+
+        import aifeynman
+
+        aifeynman.run_aifeynman("", "Nguyen1.txt", 60, "14ops.txt", polyfit_deg=6, NN_epochs=3)
+
+## Ejecución PhySo
+
+Para PhySo, se deja el ejecutable para la generar la función que halla el modelo de PhySo
+
+        python3 ejecutable_physo.py
