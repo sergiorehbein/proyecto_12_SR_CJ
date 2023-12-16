@@ -66,3 +66,29 @@ Instalamos lo esencial:
 Dado que algunos modelos como el EQL y el AI_Feynman se debe crear de previamente de forma sintetica los diferentes funciones del Bencharmak Nguyen, se deja el código en formato .py para la generación de estos archivos y se debe usar de la siguiente forma (genera 1000 datos para utilizar):
 
     python3 nguyen_benchmark.py
+
+# Ejecución de diferentes modelos y métricas.
+
+Para cada modelo se dará el ejemplo con Nguyen 1, se debe iterar de la misma forma para las otras funciones del bencharmark.
+
+## Ejecución EQL
+
+    import tensorflow as tf
+import numpy as np
+import matplotlib.pyplot as plt
+
+from EQL.model import EQL
+EQLmodel = EQL(num_layers = 1)
+EQLmodel.build_and_compile_model()
+
+
+# Suponiendo que 'data.txt' es tu archivo y que está delimitado por espacios
+data = np.loadtxt('Nguyen1.txt')
+
+# Separar los datos en x e y
+x = data[:, 0]  # Esto asume que x es la primera columna
+y = data[:, 1]  # Esto asume que y es la segunda columna
+
+EQLmodel.fit(x, y, 0.1,t0 = 6000, t1 = 2000, t2 = 2000, atol = 0.001)
+EQLmodel.summary()
+
