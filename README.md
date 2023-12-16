@@ -10,13 +10,15 @@ Se mostrará como se deben descargar y ejecutar los librerías que nos proporcio
 
 ## Pre- Instalación
 
-    Para cada código se recomienda tener un entorno virtual diferente, dado que pueden utilizar diferentes versiones de algunas librerías.
+Para cada código se recomienda tener un entorno virtual diferente, dado que pueden utilizar diferentes versiones de algunas librerías, como ejemplo:
 
+    conda create -n nombre-ev
+
+
+Ahora se procede a mostrar
 ## Installation EQL
 
     pip install EQL-NN
-
-
 
 ## Installation EQL + Encoders
 
@@ -32,7 +34,9 @@ Se recomienda encarecidamente configurar un entorno virtual nuevo escribiendo.
     source feyn/bin/activate
     
 Primero instala numpy con pip install numpy.
-El paquete 'aifeynman' está disponible en PyPI y se puede instalar con pip install aifeynman.
+El paquete 'aifeynman' está disponible en PyPI y se puede instalar con pip install aifeynman, de la siguiente forma:
+
+    pip install aifeynman
 
 Luego se puede hacer uso importando
 
@@ -57,4 +61,8 @@ Instalamos lo esencial:
 
     conda install --file requirements.txt
 
-## BenchMark
+## BenchMark Nguyen
+
+Dado que algunos modelos como el EQL y el AI_Feynman se debe crear de previamente de forma sintetica los diferentes funciones del Bencharmak Nguyen, se deja el código en formato .py para la generación de estos archivos y se debe usar de la siguiente forma (genera 1000 datos para utilizar):
+
+    python3 nguyen_benchmark.py
